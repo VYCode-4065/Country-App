@@ -37,7 +37,7 @@ const CountryDetails = () => {
   return (
     <div className={`${dark ? "bg-slate-900 text-gray-200" : ""}`}>
       {loading && <Loader />}
-      <div className="py-4 md:py-10 px-3 md:px-10 lg:h-[91vh] ">
+      <div className="py-4 md:py-10 px-3 md:px-10 h-screen lg:h-[91vh] ">
         <div className="w-32">
           <Link
             to={"/"}
@@ -102,9 +102,9 @@ const CountryDetails = () => {
                 </p>
               </div>
             </div>
-            <div className="mt-4 md:mt-20 flex gap-2">
-              <h1 className="font-semibold ">Border Countries:</h1>
-              <div className="flex items-center gap-2 px-5 w-[30vw] overflow-auto scrollbar-hide">
+            <div className="mt-4 md:mt-20 md:mb-10 lg:mb-0 flex">
+              <h1 className="font-semibold">Border Countries:</h1>
+              <div className="flex items-center gap-2 px-5 lg:w-[30vw] overflow-x-scroll ">
                 {!countryDetails?.borders
                   ? "No border countries known"
                   : countryDetails?.borders?.map((bdr) => {
